@@ -1,0 +1,107 @@
+// TODO: Use SF (or similar) fonts
+
+.page {
+    user-select: none;
+    position: relative;
+    height: 100dvh;
+    width: 100vw;
+
+    .background {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #3552c2 0%, #4e6fef 40%, #7394ff 70%, #a7baf7 90%, #f6dcb6 100%);
+    }
+
+    .homescreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.15);
+
+        .statusbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px;
+
+            .icons {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            // background-color: #ff000050;
+        }
+
+        .view {
+            position: relative;
+            flex: 1;
+
+            // background-color: #0000ff50;
+
+            .widgets {
+                position: absolute;
+                top: 0;
+                left: 0;
+                flex: 1;
+                padding: 32px 48px;
+                height: 100%;
+                width: 20%;
+
+                background-color: #ff000050;
+            }
+
+            .main {
+                position: relative;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: var(--font-display);
+                padding: 32px 48px;
+
+                .date {
+                    font-size: 32px;
+                    line-height: 1;
+                }
+
+                .time {
+                    // TODO: Use SVG to get glass effect
+                    font-size: 300px;
+                    line-height: 1;
+                    opacity: 0.75;
+                }
+
+               
+
+                // background-color: #0000ff50;
+            }
+
+             .bar {
+                    position: absolute;
+                    bottom: 12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 400px;
+                    height: 8px;
+                    border-radius: 4px;
+                    background-color: #f1f1f3;
+                }
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+}
